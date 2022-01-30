@@ -1,5 +1,9 @@
+html {
+    height: 100%;
+}
 body {
-    margin: 0px;
+    height: 100%;
+    margin: 0;
     box-sizing: border-box;
     background-color: whitesmoke;
     color: darkgrey;
@@ -8,18 +12,20 @@ body {
 
 body::-webkit-scrollbar {
     width: 0.25rem;
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: #1e1e24;
-  }
-  
-  body::-webkit-scrollbar-thumb {
+}
+
+body::-webkit-scrollbar-track {
+    background: whitesmoke;
+}
+
+body::-webkit-scrollbar-thumb {
     background: gray;
-  }
+}
 
 header {
-    position: sticky;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
     top: 0;
     padding: 5px;
     text-align: center;
@@ -27,10 +33,10 @@ header {
     color: whitesmoke;
     background-color: burlywood;
     border-radius: 0 0 15px 15px;
-    box-shadow:0px 20px 10px grey; 
+    box-shadow: 0px 20px 10px grey;
 }
 
-nav > ul {
+nav>ul {
     visibility: hidden;
     height: 0em;
     opacity: 0;
@@ -38,15 +44,17 @@ nav > ul {
     transition: height 0.5s ease-in, opacity 0.5s linear 0.5s;
 }
 
-header:hover > nav > ul {
+header:hover>nav>ul {
     visibility: visible;
     height: 5em;
     opacity: 1;
 }
 
 main {
+    margin-top: 10%;
     max-width: 960px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 article {
@@ -69,7 +77,8 @@ table {
     border-radius: 10px;
 }
 
-th, td {
+th,
+td {
     padding: 5px;
     text-align: center;
     width: 5em;
@@ -78,23 +87,53 @@ th, td {
 }
 
 th {
-    font-weight:900;
+    font-weight: 900;
 }
 
 thead {
     background-color: burlywood;
 }
 
+footer {
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    padding: 1%;
+    bottom: 0;
+    background-color: burlywood;
+}
+
+
 footer img {
     width: 40px;
     height: 40px;
 }
 
-footer ul {
-    list-style: none;
+footer img:hover {
+    animation-name: wiggle;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
 }
 
-footer li {
-    display: inline;
-}
+@keyframes wiggle {
+    0% {
+        transform: rotate(10deg);
+    }
 
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
