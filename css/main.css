@@ -1,8 +1,6 @@
-html {
-    height: 100%;
-}
+
 body {
-    height: 100%;
+    min-height: 100vh;
     margin: 0;
     box-sizing: border-box;
     background-color: whitesmoke;
@@ -26,6 +24,7 @@ header {
     position: fixed;
     z-index: 2;
     width: 100%;
+    box-sizing: border-box;
     top: 0;
     padding: 5px;
     text-align: center;
@@ -51,15 +50,15 @@ header:hover>nav>ul {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 2em;
     margin-top: 10%;
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-article {
-    margin: 5%;
-    margin-bottom: 10%;
+    max-width: 100vw;
+    margin-top: 5em;
+    padding: 5em;
 }
 
 article img {
@@ -96,14 +95,12 @@ thead {
 
 footer {
     width: 100%;
+    box-sizing: border-box;
     text-align: center;
     color: whitesmoke;
-    padding: 1%;
-    bottom: 0;
+    padding: 1em;
     background-color: burlywood;
 }
-
-
 footer img {
     width: 40px;
     height: 40px;
@@ -137,3 +134,40 @@ footer img:hover {
         transform: rotate(0deg);
     }
 }
+
+.form-container {
+    display: grid;
+    grid-area: ". a b ."
+               ". c d ."
+               ". e e .";
+}
+
+.form-container * {
+    margin-top: 1rem ;
+    flex:auto
+}
+
+/* Formulieropmaak */
+/********************/
+
+fieldset {
+    border-radius: 0 0 10px 10px;
+  }
+  
+  
+  textarea {
+    width: 100%;
+  }
+  
+  /* Opmaak van de Verzend-knop */
+  input[type='submit'] {
+    transition-duration: 2s;
+    padding: 10px 20px;
+    margin: 0.75rem 0;
+    border-radius: 6px;
+    font-size: 1.1rem;
+  }
+  [type='submit']:hover {
+    color: #fff;
+    background-color: burlywood;
+  }

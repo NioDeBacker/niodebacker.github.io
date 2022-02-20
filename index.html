@@ -15,8 +15,8 @@
         <nav>
             <ul>
                 <li>Home</li>
-                <li> <a href="html/cv.html">Curicculum Vitae</a></li>
-                <li><a href="html/contact.html">Contact</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li> <a href="#cv">Curicculum Vitae</a></li>
             </ul>
         </nav>
     </header>
@@ -26,9 +26,16 @@
             <div>
                 <img src="images/pfpic.png" alt="Nio" align="left">
                 <p>
-                    Hi I'm Nio, a student Applied Information Technology at <a href="https://www.hogent.be/en/future-student/bachelors/applied-information-technology/">Ghent University College</a>, class of 2023.
-                    My main subjects are web and app development but I have a broad interest in everything computer science related.
-                    A dedicated a driven teamplayer, I play a lot of different sports in my spare time. 
+                    Hi I'm Nio, a student Applied Information Technology at <a
+                        href="https://www.hogent.be/en/future-student/bachelors/applied-information-technology/">Ghent
+                        University College</a>, class of 2023.
+                    My main subjects are web and app development. 
+                    I have experience in creating Java apps, building websites using React and creating a RESTful API with Node.js.
+                    I'm also certified in ITIL 4 foundations &copy;	 and have worked in Agile teams.
+                    But I have a broad interest in everything computer
+                    science related. 
+                    A dedicated and driven teamplayer, I play a lot of different sports in my spare time. 
+                    Other interests include history, music, drawing and painting and I love classic movies.
 
                 </p>
             </div>
@@ -82,14 +89,17 @@
                             <td>Wireframes</td>
                             <td>+</td>
 
-                            <td></td>
-                            <td></td>
+                            <td>Agile</td>
+                            <td>+</td>
                         </tr>
                         <tr>
                             <td>NodeJS</td>
                             <td>++</td>
 
                             <td>Mockups</td>
+                            <td>+</td>
+
+                            <td>ITIL 4</td>
                             <td>+</td>
                         </tr>
                         <tr>
@@ -130,11 +140,38 @@
                 <p>work in progress...</p>
             </div>
         </article>
+        <article id="Contact">
+            <div>
+                <h2>Contact me</h2>
+                <form action="mailto:nio@telenet.be?" method="get" enctype="text/plain">
+                    <fieldset>
+                        <legend>Enter your name and message to contact me.</legend>
+                        <div class="form-container">
+                            <label for="">Name:
+                             <input name="subject" type="text" required>
+                         </label>
+                         <label for="">Message:
+                             <textarea name="body" id="" cols="30" rows="10" maxlength="500" ></textarea>
+                         </label>
+                         <input type="submit" value="submit"> 
+                         </div>
+                    </fieldset>
+                    
+                </form>
+            </div>
+        </article>
+        <article id="cv">
+            <div>
+                <h2>CV</h2>
+                <p>work in progress...</p>
+            </div>
+        </article>
     </main>
     <footer>
         <h3>My links:</h3>
         <br>
-        <a href="https://www.linkedin.com/in/nio-de-backer-979651222/"><img src="images/linkedin-icon-2.svg" alt="linkedin"></a>
+        <a href="https://www.linkedin.com/in/nio-de-backer-979651222/"><img src="images/linkedin-icon-2.svg"
+                alt="linkedin"></a>
         <a href="https://github.com/NioDeBacker"><img src="images/github-icon-1.svg" alt="github-icon-1"></a>
     </footer>
 </body>
